@@ -6,7 +6,7 @@ define([], function(){
     this.searchKey = opts.searchKey;
     this.searchMethod = opts.searchMethod || "GET";
     this.searchEncode = opts.searchEncode || "UTF-8";
-    this.params = opts.params;
+    this.params = opts.params || {};
   };
   return EbookStore;
 });

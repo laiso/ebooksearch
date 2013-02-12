@@ -13,16 +13,22 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
       .attr('action', this.store.searchUrl.replace("%s", keyword))
       .attr("accept-charset", this.store.searchEncode)
       .attr("method", this.store.searchMethod);
-    $(this.store.params).each(function(i, param){
+    $.each(this.store.params, function(key, value){
       $form.append($("<input>")
-        .attr("name", param.name)
-        .attr("value", param.value));
+        .attr("type", "hidden")
+        .attr("name", key)
+        .attr("value", value));
     });
     $form.append($("<input>")
+      .attr("type", "hidden")
       .attr("name", this.store.searchKey)
       .attr("value", keyword));
     this.$elm.append($form);
     return $form;
+  };
+
+  FormModule.prototype.removeForm = function(){
+    this.$elm.remove("#"+this.store.id);
   };
 
 
@@ -53,7 +59,10 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
 
   // multiselect + quicksearch
   $("#stores").multiSelect({
-    selectableHeader:"<input type='text' id='search' autocomplete='off' placeholder=\"絞り込み...\">"
+    selectableHeader:"<input type='text' id='search' autocomplete='off' placeholder=\"絞り込み...\">",
+    afterDeselect: function(value){
+      $("form#"+value[0]).remove();
+    }
   });
   $('#search').quicksearch($('.ms-elem-selectable', '#ms-stores')).on('keydown', function (e) {
     if (e.keyCode == 40) {

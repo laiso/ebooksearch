@@ -7,7 +7,7 @@ define(['ebookstore'], function (EbookStore) {
       name: "Kindle ストア",
       searchUrl: "http://www.amazon.co.jp/s/",
       searchKey: "field-keywords",
-      params: [{name: "url", value: "search-alias=digital-text"}]
+      params: {url: "search-alias=digital-text"}
     }),
     new EbookStore({
       id: "bookweb",
@@ -16,14 +16,14 @@ define(['ebookstore'], function (EbookStore) {
       searchKey: "KEYWORD",
       searchMethod: "POST",
       searchEncode: "SHIFT_JIS",
-      params: [{name: "skey", value: "8"}]
+      params: {skey: "8"}
     }),
     new EbookStore({
       id: "google-play",
       name: "Google Play Books",
       searchUrl: "https://play.google.com/store/search",
       searchKey: "q",
-      params: [{name: "c", value: "books"}]
+      params: {c: "books"}
     }),
     new EbookStore({
       id: "honjp",
@@ -46,7 +46,7 @@ define(['ebookstore'], function (EbookStore) {
       id: "niconico-seiga",
       name: "ニコニコ静画",
       searchUrl: "http://seiga.nicovideo.jp/search/%s",
-      params: [{name: "target", value: "book"}]
+      params: {target: "book"}
     }),
     new EbookStore({
       id: "garapagos-store",
@@ -63,13 +63,50 @@ define(['ebookstore'], function (EbookStore) {
     new EbookStore({
       id: "honto",
       name: "honto ネットストア",
-      searchUrl: "http://honto.jp/netstore/search_022_10%s.html",
+      searchUrl: "http://honto.jp/netstore/search_022_10%s.html"
+    }),
+    new EbookStore({
+      id: "bookwalker",
+      name: "電子書籍-BOOK☆WALKER",
+      searchUrl: "http://bookwalker.jp/pc/search/",
+      searchKey: "word"
+    }),
+    new EbookStore({
+      id: "ebook-japan",
+      name: "eBookJapan",
+      searchUrl: "http://www.ebookjapan.jp/ebj/search.asp",
+      searchKey: "q"
+    }),
+    new EbookStore({
+      id: "binb-store",
+      name: "BinB store",
+      searchUrl: "http://binb-store.com/index.php",
+      searchKey: "keyword",
+      params: {main_page: "addon", module: "voyager_store_asp/keyword_product_list"}
+    }),
+    new EbookStore({
+      id: "magastore",
+      name: "MAGASTORE マガストア",
+      searchUrl: "http://www.magastore.jp/search/",
+      searchKey: "q"
+    }),
+    new EbookStore({
+      id: "fujisan",
+      name: "雑誌のFujisan.co.jp",
+      searchUrl: "http://www.fujisan.co.jp/zasshi_search/",
+      searchKey: "qk"
     }),
     new EbookStore({
       id: "booklog-it",
       name: "ブクログ IT系技術書",
       searchUrl: "http://booklog.jp/opds",
       searchKey: "keyword"
+    }),
+    new EbookStore({
+      id: "appstore",
+      name: "iTunes AppStore",
+      searchUrl: "https://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search",
+      searchKey: "term"
     })
   ];
 
