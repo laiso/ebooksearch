@@ -75,6 +75,7 @@ define(['ebookstore'], function (EbookStore) {
       id: "ebook-japan",
       name: "eBookJapan",
       searchUrl: "http://www.ebookjapan.jp/ebj/search.asp",
+      searchEncode: "SHIFT_JIS",
       searchKey: "q"
     }),
     new EbookStore({

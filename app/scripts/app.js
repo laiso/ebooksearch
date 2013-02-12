@@ -10,7 +10,7 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
     var $form = $("<form>")
       .attr("id", this.store.id)
       .attr("target", this.store.id)
-      .attr('action', this.store.searchUrl.replace("%s", keyword))
+      .attr('action', this.store.searchUrl.replace("%s", encodeURIComponent(keyword)))
       .attr("accept-charset", this.store.searchEncode)
       .attr("method", this.store.searchMethod);
     $.each(this.store.params, function(key, value){
@@ -19,10 +19,12 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
         .attr("name", key)
         .attr("value", value));
     });
-    $form.append($("<input>")
-      .attr("type", "hidden")
-      .attr("name", this.store.searchKey)
-      .attr("value", keyword));
+    if(this.store.searchKey){
+      $form.append($("<input>")
+        .attr("type", "hidden")
+        .attr("name", this.store.searchKey)
+        .attr("value", keyword));
+    }
     this.$elm.append($form);
     return $form;
   };
@@ -100,6 +102,7 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
         return function(){
           window.open("", localForm.target);
           localForm.submit();
+          localForm.remove();
         };
       };
       func(form)();
