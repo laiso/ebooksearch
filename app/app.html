@@ -5,8 +5,8 @@
 <!--[if gt IE 8]><!--><html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/multi-select.css">
+    <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/vendor/modernizr.min.js"></script>
 </head>
 <body>
@@ -15,20 +15,16 @@
 
     <p class="lead">各社電子書籍ストア上の検索結果ページをダイレクトに開く為の簡単なツールです</p>
 
-    <div class="hero-unit">
-        <label>
-            キーワード: <input type="text" id="keyword">
-        </label>
-
-        <button id="search_button" type="button" class="btn btn-large btn-primary">検索する</button>
-
-
-        <div id="store-form" data-destroy="false" data-domain="true">
-            <h3>ストア選択</h3>
-            <select id="stores" name="stores[]" multiple></select>
-        </div>
-
+    <div class="search_box">
+        <input id="keyword" class="span5" placeholder="キーワードを入力">
+        <button id="search_button" type="button" class="btn">検索する</button>
     </div>
+
+    <h3>検索するストアをクリックして選択</h3>
+    <div class="select_box">
+        <select id="stores" name="stores[]" multiple></select>
+    </div>
+
 </div>
 
 <div id="forms"></div>
