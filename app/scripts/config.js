@@ -31,7 +31,7 @@ define(['ebookstore'], function (EbookStore) {
       searchUrl: "http://hon.jp/search/3.0/%s/null/"
     }),
     new EbookStore({
-      id: "honjp",
+      id: "densyo-search",
       name: "電子書籍サーチ",
       searchUrl: "http://www.densyo-search.info/result.php",
       searchKey: "key",
