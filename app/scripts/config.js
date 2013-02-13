@@ -4,7 +4,7 @@ define(['ebookstore'], function (EbookStore) {
   config.sources = [
     new EbookStore({
       id: "kindle-store",
-      name: "Kindle ストア",
+      name: "Amazon Kindle ストア",
       searchUrl: "http://www.amazon.co.jp/s/",
       searchKey: "field-keywords",
       params: {url: "search-alias=digital-text"}
@@ -43,22 +43,10 @@ define(['ebookstore'], function (EbookStore) {
       searchKey: "q"
     }),
     new EbookStore({
-      id: "niconico-seiga",
-      name: "ニコニコ静画",
-      searchUrl: "http://seiga.nicovideo.jp/search/%s",
-      params: {target: "book"}
-    }),
-    new EbookStore({
       id: "garapagos-store",
       name: "GALAPAGOS STORE",
       searchUrl: "http://galapagosstore.com/web/book/search/result",
       searchKey: "sw"
-    }),
-    new EbookStore({
-      id: "manga-zenkan",
-      name: "漫画全巻ドットコム",
-      searchUrl: "http://www.mangazenkan.com/products/list.php",
-      searchKey: "name"
     }),
     new EbookStore({
       id: "honto",
@@ -67,7 +55,7 @@ define(['ebookstore'], function (EbookStore) {
     }),
     new EbookStore({
       id: "bookwalker",
-      name: "電子書籍-BOOK☆WALKER",
+      name: "BOOK☆WALKER",
       searchUrl: "http://bookwalker.jp/pc/search/",
       searchKey: "word"
     }),
@@ -77,6 +65,38 @@ define(['ebookstore'], function (EbookStore) {
       searchUrl: "http://www.ebookjapan.jp/ebj/search.asp",
       searchEncode: "SHIFT_JIS",
       searchKey: "q"
+    }),
+    new EbookStore({
+      id: "niconico-seiga",
+      name: "ニコニコ静画",
+      searchUrl: "http://seiga.nicovideo.jp/search/%s",
+      params: {target: "book"}
+    }),
+    new EbookStore({
+      id: "tsutaya-ebooks",
+      name: "TSUTAYA.com eBOOKs",
+      searchUrl: "http://tsutaya.com/ebooks/pc/lists/search",
+      searchKey: "keyword"
+    }),
+    new EbookStore({
+      id: "manga-zenkan",
+      name: "漫画全巻ドットコム",
+      searchUrl: "http://www.mangazenkan.com/products/list.php",
+      searchKey: "name"
+    }),
+    new EbookStore({
+      id: "renta",
+      name: "電子貸本Renta!",
+      searchUrl: "http://renta.papy.co.jp/renta/sc/frm/list",
+      searchEncode: "EUC-JP",
+      searchKey: "word"
+    }),
+    new EbookStore({
+      id: "digital-ehon",
+      name: "Digital e-hon（デジタルイーホン）",
+      searchUrl: "http://www.de-hon.ne.jp/digital/bin/qfind_detail.asp",
+      searchEncode: "SHIFT_JIS",
+      searchKey: "keyword"
     }),
     new EbookStore({
       id: "binb-store",
@@ -98,6 +118,12 @@ define(['ebookstore'], function (EbookStore) {
       searchKey: "qk"
     }),
     new EbookStore({
+      id: "booklog-puboo",
+      name: "ブクログのパブー",
+      searchUrl: "http://p.booklog.jp/books",
+      searchKey: "w"
+    }),
+    new EbookStore({
       id: "booklog-it",
       name: "ブクログ IT系技術書",
       searchUrl: "http://booklog.jp/opds",
@@ -105,7 +131,7 @@ define(['ebookstore'], function (EbookStore) {
     }),
     new EbookStore({
       id: "appstore",
-      name: "iTunes AppStore",
+      name: "Apple iTunes AppStore",
       searchUrl: "https://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search",
       searchKey: "term"
     })

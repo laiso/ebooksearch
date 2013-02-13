@@ -10,21 +10,33 @@
     <script src="scripts/vendor/modernizr.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <h1>電子書籍ストア一括検索</h1>
+<div id="wrap">
+    <div class="container">
+        <h1>電子書籍ストア一括検索</h1>
 
-    <p class="lead">各社電子書籍ストア上の検索結果ページをダイレクトに開く為の簡単なツールです</p>
+        <p class="lead">各社電子書籍ストア上の検索結果ページをダイレクトに開く為の簡単なツールです</p>
 
-    <div class="search_box">
-        <input id="keyword" class="span5" placeholder="キーワードを入力">
-        <button id="search_button" type="button" class="btn">検索する</button>
+        <div class="well">
+            <input id="keyword" class="span5" placeholder="キーワードを入力">
+            <button id="search_button" type="button" class="btn">検索する</button>
+            <small><span id="help-inline">※選択したストアの数だけ新しいウィンドウを開きます</span></small>
+        </div>
+
+        <p>検索するストアをクリックして選択</p>
+        <div class="select_box">
+            <select id="stores" name="stores[]" multiple></select>
+        </div>
+
+        <div id="footer" class="well">
+            <ul class="inline">
+                <li>
+                    連絡先: <a href="https://twitter.com/laiso">@laiso</a><<a href="mailto:laiso@lai.so">laiso@lai.so</a>>
+                </li>
+                <li>このサイトについて</li>
+            </ul>
+        </div>
+
     </div>
-
-    <h3>検索するストアをクリックして選択</h3>
-    <div class="select_box">
-        <select id="stores" name="stores[]" multiple></select>
-    </div>
-
 </div>
 
 <div id="forms"></div>
