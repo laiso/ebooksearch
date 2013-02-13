@@ -36,7 +36,7 @@ define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'
   // フォーム初期化
   var cleanup = function(){
     $.each(document.forms, function(i, form){
-      form.remove();
+      $(form).remove();
     });
   };
 
