@@ -31,6 +31,13 @@ define(['ebookstore'], function (EbookStore) {
       searchUrl: "http://hon.jp/search/3.0/%s/null/"
     }),
     new EbookStore({
+      id: "honjp",
+      name: "電子書籍サーチ",
+      searchUrl: "http://www.densyo-search.info/result.php",
+      searchKey: "key",
+      params: {search: "1"}
+    }),
+    new EbookStore({
       id: "reader-store",
       name: "Sony Reader Store",
       searchUrl: "http://search.ebookstore.sony.jp/ja_all/search.x",
@@ -77,6 +84,12 @@ define(['ebookstore'], function (EbookStore) {
       name: "TSUTAYA.com eBOOKs",
       searchUrl: "http://tsutaya.com/ebooks/pc/lists/search",
       searchKey: "keyword"
+    }),
+    new EbookStore({
+      id: "j-comi",
+      name: "Jコミ",
+      searchUrl: "http://www.j-comi.jp/title",
+      searchKey: "query"
     }),
     new EbookStore({
       id: "manga-zenkan",

@@ -94,10 +94,6 @@ define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'
     }
   });
 
-  $('#search_button').hover(function(){
-    $('#search_term').tooltip('show');
-  });
-
   // 検索実行
   $('#search_button').click(function () {
     var keyword = $("#keyword").val();
