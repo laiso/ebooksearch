@@ -1,4 +1,4 @@
-define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], function (store, config) {
+define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
   var $ = jQuery;
 
   // フォーム生成
@@ -58,7 +58,7 @@ define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'
       f(store)();
     });
 
-    store.set('selectedStore', saveItems);
+    storejs.set('selectedStore', saveItems);
 
     cleanup();
 
@@ -67,7 +67,7 @@ define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'
 
 
   // ストア情報
-  var storeString = store.get('selectedStore') || [];
+  var storeString = storejs.get('selectedStore') || [];
   var recentSelected = (storeString.indexOf(",") > -1)? storeString.split(","): storeString;
   $.each(config.sources, function(i, source){
     var $option = $("<option>")
