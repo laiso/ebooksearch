@@ -1,4 +1,4 @@
-define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
+define(['store', 'config', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
   var $ = jQuery;
 
   // フォーム生成
