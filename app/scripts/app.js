@@ -1,4 +1,4 @@
-define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], function (config) {
+define(['store', 'config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
   var $ = jQuery;
 
   // フォーム生成
@@ -36,7 +36,7 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
   // フォーム初期化
   var cleanup = function(){
     $.each(document.forms, function(i, form){
-      form.remove();
+      $(form).remove();
     });
   };
 
@@ -58,7 +58,7 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
       f(store)();
     });
 
-    localStorage.setItem('selectedStore', saveItems);
+    storejs.set('selectedStore', saveItems);
 
     cleanup();
 
@@ -67,7 +67,8 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
 
 
   // ストア情報
-  var recentSelected = localStorage.getItem('selectedStore').split(",");
+  var storeString = storejs.get('selectedStore') || [];
+  var recentSelected = (storeString.indexOf(",") > -1)? storeString.split(","): storeString;
   $.each(config.sources, function(i, source){
     var $option = $("<option>")
       .val(source.id)
@@ -91,10 +92,6 @@ define(['config', 'garlic', 'jquery.multi-select', 'jquery.quicksearch'], functi
       $('#stores').focus();
       return false;
     }
-  });
-
-  $('#search_button').hover(function(){
-    $('#search_term').tooltip('show');
   });
 
   // 検索実行
