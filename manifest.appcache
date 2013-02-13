@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Wed Feb 13 2013 14:14:01 GMT+0900 (JST)
+# Time: Wed Feb 13 2013 14:55:15 GMT+0900 (JST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -21,6 +21,13 @@ CACHE MANIFEST
 #  configFile: /Users/kstg/.nodebrew/node/v0.8.16/lib/node_modules/yeoman/lib/support/confess.json
 
 CACHE:
+http://www.google-analytics.com/ga.js
 
 NETWORK:
 *
+Error: Script error
+http://requirejs.org/docs/errors.html#scripterror
+
+  http://localhost:3501/scripts/vendor/9903151d.require.js:1818
+  http://localhost:3501/scripts/vendor/9903151d.require.js:539 in onError
+  http://localhost:3501/scripts/vendor/9903151d.require.js:1713
