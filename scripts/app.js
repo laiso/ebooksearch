@@ -1,4 +1,4 @@
-define(['store', 'config', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
+define(['store', 'config', 'analytics', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
   var $ = jQuery;
 
   // フォーム生成
@@ -114,5 +114,7 @@ define(['store', 'config', 'jquery.multi-select', 'jquery.quicksearch'], functio
       };
       func(form)();
     });
+
+    _gaq.push(['_trackEvent', 'Buttons', 'Search', 'Stores', storejs.get('selectedStore')]);
   });
 });
