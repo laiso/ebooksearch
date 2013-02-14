@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>電子書籍ストア一括検索</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="http://lai.so/ebooksearch/favicon.ico">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>電子書籍ストア一括検索</h1>
-        <p class="lead">各社電子書籍ストア上の検索結果ページをダイレクトに開く為の簡単なツールです</p>
-        <iframe src="app.html?1" frameborder="0" seamless width="100%" height="800px"></iframe>
-    </div>
+<div class="container">
+    <h1>電子書籍ストア一括検索</h1>
 
-    <div id="footer" class="well">
-        <ul class="inline">
-            <li><a href="http://laiso.hatenablog.com/entry/2013/02/13/160200">このサイトについて</a></li>
-            <li>連絡先: <a href="https://twitter.com/laiso">@laiso</a><<a href="mailto:laiso@lai.so">laiso@lai.so</a>></li>
-        </ul>
-    </div>
+    <p class="lead">各社電子書籍ストア上の検索結果ページをダイレクトに開く為の簡単なツールです</p>
 
-    <script>
-        var _gaq=[['_setAccount','UA-34320249-2'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+    <div class="row">
+        <div id="search_frame" class="span8">
+            <iframe src="app.html?1" frameborder="0" seamless width="750px" height="650px"></iframe>
+        </div>
+
+        <div id="ad" class="span2">
+            <iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=rer-22&o=9&p=30&l=bn1&mode=computers-jp&browse=45726011&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr"
+                    marginwidth="0" marginheight="0" width="350" height="600" border="0" frameborder="0"
+                    style="border:none;" scrolling="no"></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="footer" class="well">
+    <ul class="inline">
+        <li><a href="http://laiso.hatenablog.com/entry/2013/02/13/160200">このサイトについて</a></li>
+        <li>連絡先: <a href="https://twitter.com/laiso">@laiso</a><<a href="mailto:laiso@lai.so">laiso@lai.so</a>></li>
+    </ul>
+</div>
+
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-34320249-2'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+
 </body>
 </html>
