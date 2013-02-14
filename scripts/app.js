@@ -108,7 +108,7 @@ define(['store', 'config', 'jquery.multi-select', 'jquery.quicksearch'], functio
     $.each(document.forms, function(i, form){
       var func = function(localForm){
         return function(){
-          window.open("", localForm.target);
+          if(localForm.target.nodeName !== "INPUT") window.open("", localForm.target);
           localForm.submit();
         };
       };
