@@ -12,7 +12,8 @@ define(['store', 'config', 'jquery.multi-select', 'jquery.quicksearch'], functio
       .attr("target", this.store.id)
       .attr('action', this.store.searchUrl.replace("%s", encodeURIComponent(keyword)))
       .attr("accept-charset", this.store.searchEncode)
-      .attr("method", this.store.searchMethod);
+      .attr("method", this.store.searchMethod)
+      .css("display", "none");
     $.each(this.store.params, function(key, value){
       $form.append($("<input>")
         .attr("type", "hidden")
