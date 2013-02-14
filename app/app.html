@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="http://lai.so/ebooksearch/favicon.ico">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/multi-select.css">
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/vendor/modernizr.min.js"></script>
 </head>
 <body>
-        <div class="well">
-            <input id="keyword" class="span5" placeholder="キーワードを入力">
-            <button id="search_button" type="button" class="btn">検索する</button>
-            <small><span id="help-inline">※選択したストアの数だけ新しいウィンドウを開きます</span></small>
-        </div>
+<div id="searchwrap" class="container">
+    <div class="well">
+        <input id="keyword" class="span5" placeholder="キーワードを入力">
+        <button id="search_button" type="button" class="btn">検索する</button>
+        <br>
+        <span class="help-inline">※選択したストアの数だけ新しいウィンドウを開きます</span>
+    </div>
 
+    <iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=rer-22&o=9&p=48&l=st1&mode=kindle-jp&search=%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="728" height="90" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+
+    <div class="well">
         <p>検索するストアをクリックして選択</p>
+
         <div class="select_box">
             <select id="stores" name="stores[]" multiple></select>
         </div>
+    </div>
+</div>
+
 
 <div id="forms"></div>
 

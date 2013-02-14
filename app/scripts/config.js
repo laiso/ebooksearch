@@ -7,7 +7,7 @@ define(['ebookstore'], function (EbookStore) {
       name: "Amazon Kindle ストア",
       searchUrl: "http://www.amazon.co.jp/s/",
       searchKey: "field-keywords",
-      params: {url: "search-alias=digital-text"}
+      params: {url: "search-alias=digital-text", tag: "rer-22"}
     }),
     new EbookStore({
       id: "bookweb",
