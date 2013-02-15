@@ -1,4 +1,4 @@
-define(['store', 'config', 'analytics', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
+define(['store', 'config', 'jquery.multi-select', 'jquery.quicksearch'], function (storejs, config) {
   var $ = jQuery;
 
   // フォーム生成
@@ -108,13 +108,11 @@ define(['store', 'config', 'analytics', 'jquery.multi-select', 'jquery.quicksear
     $.each(document.forms, function(i, form){
       var func = function(localForm){
         return function(){
-          if(localForm.target.nodeName !== "INPUT") window.open("", localForm.target);
+          window.open("", localForm.target);
           localForm.submit();
         };
       };
       func(form)();
     });
-
-    _gaq.push(['_trackEvent', 'Buttons', 'Search', 'Stores', storejs.get('selectedStore')]);
   });
 });
