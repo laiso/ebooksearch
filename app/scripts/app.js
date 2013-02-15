@@ -79,6 +79,13 @@ define(['store', 'config', 'analytics', 'jquery.multi-select', 'jquery.quicksear
     $("#stores").append($option);
   });
 
+
+  // Analytics
+  _gaq.push(['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js']);
+  _gaq.push(['_setAccount', 'UA-34320249-2']);
+  _gaq.push(['_trackPageview']);
+
+
   // multiselect + quicksearch
   $("#stores").multiSelect({
     selectableHeader:"<input type='text' id='search' autocomplete='off' placeholder=\"絞り込み...\">",
