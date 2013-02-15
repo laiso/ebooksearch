@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "電子書籍ストア一括検索",
+    "description": "各社電子書籍ストア上の検索結果ページをダイレクトに開く為の簡単なツールです",
+    "version": "1.0.2",
+    "app": {
+        "launch": {
+            "web_url": "http://lai.so/ebooksearch/"
+        }
+    },
+    "icons": {
+        "128": "icon_128.png"
+    }
+}
