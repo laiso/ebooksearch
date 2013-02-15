@@ -56,6 +56,35 @@ define(['ebookstore'], function (EbookStore) {
       searchKey: "sw"
     }),
     new EbookStore({
+      id: "bookplace",
+      name: "BookPlace：ToshibaPlaces",
+      searchUrl: "http://toshibabookplace.booklive.jp/search/keyword",
+      searchKey: "keyword"
+    }),
+    new EbookStore({
+      id: "bookpass",
+      name: "ブックパス～auの電子書籍ストア～",
+      searchUrl: "http://www.bookpass.auone.jp/title/",
+      searchMethod: "POST",
+      searchKey: "kwd",
+      params:{android:1, biblio:1}
+    }),
+    new EbookStore({
+      id: "7net",
+      name: "セブンネット / セブンイレブン",
+      searchUrl: "http://www.7netshopping.jp/dgbooks/search_result/",
+      searchKey: "kword_in",
+      params:{ctgySelectl: "dgbooks"}
+    }),
+    new EbookStore({
+      id: "ocn",
+      name: "OCN コンテンツナビ",
+      searchUrl: "http://payon-search.ocn.ne.jp/search.php",
+      searchKey: "MT",
+      searchEncode: "SHIFT_JIS",
+      params:{IE:"Shift-JIS", channel:"05"}
+    }),
+    new EbookStore({
       id: "honto",
       name: "honto ネットストア",
       searchUrl: "http://honto.jp/netstore/search_022_10%s.html"
@@ -141,6 +170,12 @@ define(['ebookstore'], function (EbookStore) {
       name: "ブクログ IT系技術書",
       searchUrl: "http://booklog.jp/opds",
       searchKey: "keyword"
+    }),
+    new EbookStore({
+      id: "gihyo",
+      name: "Gihyo Digital Publishing",
+      searchUrl: "https://gihyo.jp/dp/ebook",
+      searchKey: "query"
     }),
     new EbookStore({
       id: "appstore",
