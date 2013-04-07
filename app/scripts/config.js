@@ -12,11 +12,9 @@ define(['ebookstore'], function (EbookStore) {
     new EbookStore({
       id: "bookweb",
       name: "紀伊國屋書店BookWeb / Kinoppy",
-      searchUrl: "http://bookweb.kinokuniya.co.jp/guest/cgi-bin/search.cgi",
-      searchKey: "KEYWORD",
-      searchMethod: "POST",
-      searchEncode: "SHIFT_JIS",
-      params: {skey: "8"}
+      searchUrl: "http://www.kinokuniya.co.jp/disp/CSfDispListPage_001.jsp",
+      searchKey: "q",
+      params: {qs: "true", ptk: "03"}
     }),
     new EbookStore({
       id: "google-play",
