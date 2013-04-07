@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/multi-select.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/vendor/modernizr.min.js"></script>
+</head>
+<body>
+<div id="searchwrap" class="container">
+    <div class="well">
+        <input id="keyword" class="span5" placeholder="キーワードを入力">
+        <button id="search_button" type="button" class="btn">検索する</button>
+        <br>
+        <span class="help-inline">※選択したストアの数だけ新しいウィンドウを開きます</span>
+    </div>
+
+    <div id="adsense">
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-4402456634471306";
+        google_ad_slot = "5707475271";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+    </div>
+
+    <div class="well">
+        <p>検索するストアをクリックして選択</p>
+
+        <div class="select_box">
+            <select id="stores" name="stores[]" multiple></select>
+        </div>
+    </div>
+</div>
+
+
+<div id="forms"></div>
+
+<!--[if lt IE 7]>
+<p class="chromeframe">あなたは古いブラウザを使用しているようです。<a href="http://browsehappy.com/">ブラウザをアップデート</a> するか <a
+        href="http://www.google.com/chromeframe/?redirect=true">Google Chrome Frame</a>をインストールしてご利用ください</p>
+<![endif]-->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+
+<script data-main="scripts/main" src="scripts/vendor/require.js"></script>
+
+<!--<script>-->
+    <!--(function (d, t) {-->
+        <!--var g = d.createElement(t), s = d.getElementsByTagName(t)[0];-->
+        <!--g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';-->
+        <!--s.parentNode.insertBefore(g, s)-->
+    <!--}(document, 'script'));-->
+<!--</script>-->
+</body>
+</html>
