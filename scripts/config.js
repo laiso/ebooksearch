@@ -55,12 +55,6 @@ define(['ebookstore'], function (EbookStore) {
       searchKey: "q"
     }),
     new EbookStore({
-      id: "puburi",
-      name: "電子文庫パブリ",
-      searchUrl: "https://www.paburi.com/paburi/bin/qfind2.asp",
-      searchKey: "keyword"
-    }),
-    new EbookStore({
       id: "garapagos-store",
       name: "GALAPAGOS STORE",
       searchUrl: "http://galapagosstore.com/web/book/search/result",
